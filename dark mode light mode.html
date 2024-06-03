@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+
+.main{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.btn{
+   border-radius: 25px;
+   width: 100px;
+   height: 50px;
+    background-color: black;
+    border: 2px solid white;
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+
+<body>
+    <h1 class="head">hello</h1>
+
+
+    <div class="main">
+        <div class="btn">dark  
+             <i class='bi bi-moon-stars-fill'></i>
+        </div>
+    </div>
+</body>
+
+<script>
+    let btn =document.getElementsByClassName("btn");
+    let head =document.getElementsByClassName("head");
+    let a=document.getElementsByClassName("main");
+
+
+let b=true;
+
+ btn[0].addEventListener("click",()=>{
+        
+if(b){
+    head[0].innerText ="welcome";
+    btn[0].innerHTML ="light <i class='bi bi-brightness-high'></i> ";
+    btn[0].style.backgroundColor="grey";
+    a[0].style.backgroundColor="black";
+b=false;
+
+}
+
+else{
+    head[0].innerText="hello";
+    btn[0].innerHTML="dark <i class='bi bi-moon-stars-fill'></i>";
+    btn[0].style.backgroundColor="black";
+    a[0].style.backgroundColor="white";
+  
+
+b=true;
+}})
+</script>
+</html>
